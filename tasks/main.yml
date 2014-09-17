@@ -54,3 +54,25 @@
   user: >
     name=root
     password="$1$re6ft8gy$PweYoLIPFrEo/y0OeVQyA/"
+    
+- name: Install libvirt requirements (Debian only)
+  apt: pkg={{ item }} state=present
+  when: ansible_distribution == 'Debian'  
+  when: vagrant_libvirt_enabled   
+  with_items:
+    - libxslt-dev 
+    - libxml2-dev 
+    - libvirt-dev
+    
+- name: Install libvirt requirements (CentOS only)
+  yum: pkg={{ item }} state=present
+  when: ansible_distribution == 'CentOS'    
+  when: vagrant_libvirt_enabled   
+  with_items:
+    - libxslt-devel 
+    - libxml2-devel 
+    - libvirt-devel   
+    
+- name: Install libvirt plugin
+  command: vagrant plugin install vagrant-libvirt
+  when: vagrant_libvirt_enabled   

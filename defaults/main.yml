@@ -1,3 +1,4 @@
 sudoers_path: /etc/sudoers.d/vagrant
 vagrant_user_shell: /bin/bash
 vagrant_home: /home/vagrant
+vagrant_libvirt_enabled: no                      
