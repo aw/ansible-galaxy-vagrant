@@ -1,3 +1,7 @@
+# WARNING: DEPRECATED
+
+I don't use this anymore, and don't plan on maintaining it. Please use at your own risk.
+
 # Ansible role for Vagrant
 
 This role will configure your server with the standard default vagrant credentials.
@@ -32,4 +36,4 @@ MIT License
 
 # Author
 
-Alex Williams (Unscramble) - http://jidoteki.com
+Alexander Williams (Unscramble) - https://jidoteki.com
